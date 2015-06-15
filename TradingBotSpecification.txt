@@ -1,0 +1,60 @@
+Main Functions
+
+Start()
+- Initializes the bot, sets parameters, reads from database for previous data
+
+Tick() 
+- Trading engine in here, gets called continuously as defined by tick interval, takes in market data – buy/sell/etc, continuously writes to portfolio, continuously writes to DB
+
+Error() 
+- Exception handling that is caught, determines what caused the error and how to correctly log and write to the database for last results
+
+Stop() 
+- Stops the bot, stores final values in database
+
+Log() 
+- Logs given object/message/etc 
+
+Database()
+- Writes, updates, or returns queries to database for persisting and reading data, contains all database connections here
+
+Portfolio()
+- Updates or returns info from the current portfolio for persisting and reading data
+
+
+
+Trading Functions
+
+Buy() 
+- Attempts to purchase the security at the price and order details, returns info about the results as per the API, adds order to a buffer
+
+Sell()
+- Attempts to sell the security at the price and order details, returns info about the results as per the API,
+adds order to a buffer
+
+Orders() 
+- Gets or clears all current orders/specific order based on the parameters given
+
+
+
+Trading Engine Logic
+
+- Based on a machine learning algorithm
+
+Enter When ___
+Exit When ___
+Stop When ___
+
+
+
+
+
+
+
+
+
+
+
+
+
+
